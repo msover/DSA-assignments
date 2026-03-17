@@ -1,17 +1,17 @@
-#include "ShortTest.h"
+#include "../tests/ShortTest.h"
 #include <assert.h>
-#include "Set.h"
-#include "SetIterator.h"
+#include "../Set.h"
+#include "../SetIterator.h"
 
 void testAll() { 
 	Set s;
 	assert(s.isEmpty() == true);
-	assert(s.size() == 0); 
-	assert(s.add(5)==true);
+	assert(s.size() == 0);
 	assert(s.add(1)==true);
+	assert(s.add(1)==false);
+	assert(s.add(5)==true);
 	assert(s.add(10)==true);
 	assert(s.add(7)==true);
-	assert(s.add(1)==false);
 	assert(s.add(10)==false);
 	assert(s.add(-3)==true);
 	assert(s.size() == 5);

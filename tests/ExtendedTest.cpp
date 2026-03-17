@@ -1,7 +1,7 @@
-#include "Set.h"
+#include "../Set.h"
 #include <assert.h>
 #include "ExtendedTest.h"
-#include "SetIterator.h"
+#include "../SetIterator.h"
 #include <iostream>
 
 using namespace std;
