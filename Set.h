@@ -11,7 +11,7 @@ class Set {
 	friend class SetIterator;
 
 private:
-	
+
 	int elemsCount;
 	int setCap;
 	int setSize;

@@ -77,7 +77,7 @@ bool Set::remove(TElem elem) {
 	this->elemsCount --;
 	if (elem == this->smallestElem) {
 		this->smallestElem = getSmallestElem();
-		if (smallestElem == NULL_TELEM) {
+		if (this->elemsCount == 0) {
 			this->setSize = 0;
 			this->smallestElem = 0;
 			return true;
