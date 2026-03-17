@@ -11,11 +11,12 @@ class Set {
 	friend class SetIterator;
 
 private:
-
-
+	
 	int elemsCount;
 	int setCap;
-	float shrinkTriggerMultiplier = 0.25;
+	int setSize;
+	bool* elems;
+	int smallestElem;
 
 	void shiftRight(int positions);
 	void shiftLeft(int positions);
@@ -26,11 +27,7 @@ private:
 
 
 public:
-	//PROVISORY
-	//TODO - MAKE TS PRIVATE
-	int setSize;
-	bool* elems;
-	int smallestElem;
+
     //implicit constructor
     Set();
 
