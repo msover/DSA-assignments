@@ -11,6 +11,7 @@ private:
 	SetIterator(const Set& s);
 
 	//TODO - Representation
+	int currentIndex;
 
 public:
 	void first();
