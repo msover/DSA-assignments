@@ -10,7 +10,6 @@ SetIterator::SetIterator(const Set& m) : set(m)
 
 
 void SetIterator::first() {
-	//TODO - Implementation
 	this->currentIndex = 0;
 	while (valid() && !this->set.elems[this->currentIndex])
 	{
