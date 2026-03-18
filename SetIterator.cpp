@@ -15,10 +15,6 @@ void SetIterator::first() {
 	{
 		this->currentIndex++;
 	}
-	if (!valid())
-	{
-		throw std::exception();
-	}
 }
 
 
