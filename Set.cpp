@@ -8,6 +8,7 @@ Set::Set() {
 	this->elemsCount = 0;
 }
 //BC=AC=WC=Theta(n)
+//Amortized=Theta(1)
 void Set::resize(float capMultiplier) {
 	this->setCap *= capMultiplier;
 	bool* newElems = new bool[this->setCap]{false};
@@ -42,6 +43,7 @@ int Set::getTrueIndex(TElem elem) const{
 }
 //WC=AC=Theta(n)
 //BC=Theta(1)
+//Amortized=Theta(1)
 bool Set::add(TElem elem) {
 	if (search(elem)) return false;
 	this->elemsCount ++;
