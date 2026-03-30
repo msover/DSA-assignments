@@ -7,7 +7,7 @@ Set::Set() {
 	this->smallestElem = 0;
 	this->elemsCount = 0;
 }
-
+//BC=AC=WC=Theta(n)
 void Set::resize(float capMultiplier) {
 	this->setCap *= capMultiplier;
 	bool* newElems = new bool[this->setCap]{false};
@@ -17,7 +17,7 @@ void Set::resize(float capMultiplier) {
 	delete[] this->elems;
 	this->elems = newElems;
 }
-
+//BC=AC=WC=Theta(n)
 void Set::shiftRight(int positions) {
 	for (int i = this->setSize - 1; i >= 0; i --) {
 		this->elems[i + positions] = this->elems[i];
@@ -26,6 +26,7 @@ void Set::shiftRight(int positions) {
 	this->setSize += positions;
 }
 
+//BC=AC=WC=Theta(n)
 void Set::shiftLeft(int positions) {
 	for (int i = positions; i < this->setSize; i++) {
 		this->elems[i - positions] = this->elems[i];
@@ -39,6 +40,8 @@ void Set::shiftLeft(int positions) {
 int Set::getTrueIndex(TElem elem) const{
 	return elem - this->smallestElem;
 }
+//WC=AC=Theta(n)
+//BC=Theta(1)
 bool Set::add(TElem elem) {
 	if (search(elem)) return false;
 	this->elemsCount ++;
@@ -60,7 +63,8 @@ bool Set::add(TElem elem) {
 	this->elems[trueIndex] = true;
 	return true;
 }
-
+//WC=AC=O(n)
+//BC=Theta(1)
 int Set::getSmallestElem() const {
 	for (int i = 0; i < this->setSize; i++) {
 		if (this->elems[i]) {
@@ -69,7 +73,8 @@ int Set::getSmallestElem() const {
 	}
 	return NULL_TELEM;
 }
-
+//WC=AC=O(n)
+//BC=Theta(1)
 bool Set::remove(TElem elem) {
 	if (!search(elem)) return false;
 	this->elems[getTrueIndex(elem)] = false;
@@ -88,7 +93,7 @@ bool Set::remove(TElem elem) {
 
 	return true;
 }
-
+//BC=WC=AC=Theta(1)
 bool Set::search(TElem elem) const {
 	int trueIndex = getTrueIndex(elem);
 	if (trueIndex < 0 || trueIndex >= this->setSize) {
@@ -116,5 +121,3 @@ Set::~Set() {
 SetIterator Set::iterator() const {
 	return SetIterator(*this);
 }
-
-
