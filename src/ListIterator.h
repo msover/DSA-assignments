@@ -9,7 +9,7 @@ class ListIterator{
 	friend class IteratedList;
 private:
 	//TODO - Representation 
-
+	int current;
 	//DO NOT CHANGE THIS PART
 	const IteratedList& list;
 	ListIterator(const IteratedList& lista);
