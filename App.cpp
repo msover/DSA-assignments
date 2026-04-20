@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
 
-	// testAll();
+	testAll();
 	testAllExtended();
 
 	cout << "That's all!" << endl;
