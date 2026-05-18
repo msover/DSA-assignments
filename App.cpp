@@ -1,23 +1,12 @@
-#include "Set.h"
-#include "SetIterator.h"
-#include "tests/ExtendedTest.h"
-#include "tests/ShortTest.h"
-#include <stack>
 #include <iostream>
-using namespace std;
 
+#include "ShortTest.h"
+#include "ExtendedTest.h"
 
-
-
-int main() {
-
-	testAll();
+int main(){
+    testAll();
 	testAllExtended();
 
-	cout << "That's all!" << endl;
+    std::cout<<"Finished SMM Tests!"<<std::endl;
 	system("pause");
-
 }
-
-
-

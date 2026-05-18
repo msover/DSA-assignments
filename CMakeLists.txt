@@ -1,19 +1,17 @@
 cmake_minimum_required(VERSION 4.1)
-project(DSA_assignments)
+project(SortedMultiMapHash)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories()
+include_directories(.)
 
-add_executable(DSA_assignments
-		App.cpp
-		tests/ExtendedTest.cpp
-		tests/ExtendedTest.h
-		Set.cpp
-		Set.h
-		SetIterator.cpp
-		SetIterator.h
-		tests/ShortTest.cpp
-		tests/ShortTest.h
-		App.cpp
-		App.cpp)
+add_executable(SortedMultiMapHash
+        App.cpp
+        ExtendedTest.cpp
+        ExtendedTest.h
+        ShortTest.cpp
+        ShortTest.h
+        SMMIterator.cpp
+        SMMIterator.h
+        SortedMultiMap.cpp
+        SortedMultiMap.h)
